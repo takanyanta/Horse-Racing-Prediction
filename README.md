@@ -1,2 +1,5 @@
 # Horse-racing
-Web Scraping, Optimization
+Using Web Scraping, Optimization
+
+## How to Optimize
+
