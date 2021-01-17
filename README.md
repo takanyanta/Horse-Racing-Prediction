@@ -20,6 +20,7 @@ Web Scraping, Optimization
 
 ### 2. Descriptive analysis
 * Becoming suspicious about common knowledge about horse racing
+
 | Common knowledge | Explanation |
 ----|---- 
 | The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
