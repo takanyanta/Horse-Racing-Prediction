@@ -5,16 +5,20 @@ Web Scraping, Optimization
 * For my interest in horse racing(stochastic game)
 * Expectation to be considered as the part of my investment
 
-## Analytics structure
+## Analytics process
+* Analytics process is composed as below;
 ### 1. Collecting past data
 ### 2. Descriptive analysis
 ### 3. Optimization of betting
 ### 4. Test by real race
 
-## 1. Collecting past data
+## Process
 
-## 2. Descriptive analysis
+### 1. Collecting past data
+* By using the technique of Web Scraping, extracting the race data from <a href="https://www.netkeiba.com/">net keiba</a>.
 
-## 3. Optimization of betting
+### 2. Descriptive analysis
 
-## 4. Test by real race
+### 3. Optimization of betting
+
+### 4. Test by real race
