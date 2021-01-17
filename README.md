@@ -22,7 +22,7 @@ Web Scraping, Optimization
 * Becoming suspicious about common knowledge about horse racing
 | Common knowledge | Explanation |
 ----|---- 
-| TD1 | TD3 |
+| The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to be lose because of sands falled down on the face |
 | TD2 | TD4 |
 
 ### 3. Optimization of betting
