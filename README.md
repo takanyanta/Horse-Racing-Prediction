@@ -15,9 +15,12 @@ Web Scraping, Optimization
 ## Process
 
 ### 1. Collecting past data
-* By using the technique of Web Scraping, extracting the race data from <a href="https://www.netkeiba.com/">net keiba</a>.
+* By using the technique of Web Scraping, extracting the race data from <a href="https://www.netkeiba.com/">netkeiba.com</a>.
+* As there are enormous race data, it takes tremendous times by extracting all data. So focusing on "not retired horse".
 
 ### 2. Descriptive analysis
+
+
 
 ### 3. Optimization of betting
 
