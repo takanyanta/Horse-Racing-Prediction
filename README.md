@@ -27,5 +27,7 @@ Web Scraping, Optimization
 | TD2 | TD4 |
 
 ### 3. Optimization of betting
+* Though there are many betting styles, focused to the below; 
 
 ### 4. Test by real race
+* 
