@@ -7,4 +7,14 @@ Web Scraping, Optimization
 
 ## Analytics structure
 ### 1. Collecting past data
-### 2. 
+### 2. Descriptive analysis
+### 3. Optimization of betting
+### 4. Test by real race
+
+## 1. Collecting past data
+
+## 2. Descriptive analysis
+
+## 3. Optimization of betting
+
+## 4. Test by real race
