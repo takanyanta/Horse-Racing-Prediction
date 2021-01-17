@@ -19,8 +19,11 @@ Web Scraping, Optimization
 * As there are enormous race data, it takes tremendous times by extracting all data. So focusing on "not retired horse".
 
 ### 2. Descriptive analysis
-
-
+* Becoming suspicious about common knowledge about horse racing
+| Common knowledge | Explanation |
+----|---- 
+| TD1 | TD3 |
+| TD2 | TD4 |
 
 ### 3. Optimization of betting
 
