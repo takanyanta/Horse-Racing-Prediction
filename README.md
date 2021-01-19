@@ -17,7 +17,8 @@ Web Scraping, Optimization
 | Common knowledge | Explanation |
 ----|---- 
 | The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
-| TD2 | TD4 |
+| * For the the turf race, when field conditions becomes wose, the speed tends to be slow  | TD4 |
+| * In the the turf, when field conditions becomes wose, the speed becomes slow.  | TD4 |
 
 ### 3. Optimization of betting
 * Though there are many betting styles, focused to the below; 
