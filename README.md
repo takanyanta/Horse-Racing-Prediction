@@ -26,11 +26,11 @@ Web Scraping, Optimization
 ----|---- 
 | win(Tansho) | predicting the horse which goals first  |
 | Place, Show(Fukusyo)  | predicting the horse which goals within third(Second when the number of starters is less than 8) |
-| Quinella(Umaren)  | predicting the two horses which goal within first and second |
-| Exacta(Umatan)  | TD4 |
-| Quinella Place(Waido)  | TD4 |
-| Trio(Sanrenpuku)  | TD4 |
-| Trifecta(Sanrentan)  | TD4 |
+| Quinella(Umaren)  | predicting the two horses which goal within first and second, in no particular order |
+| Exacta(Umatan)  | redicting the two horses which goal within first and second, in particular order |
+| Quinella Place(Waido)  | predicting the two horses which goal within third, in no particular order |
+| Trio(Sanrenpuku)  | predicting the three horses which goal within third, in no particular order |
+| Trifecta(Sanrentan)  | predicting the three horses which goal within third, in particular order  |
 
 ### 4. Test by real race
 * 
