@@ -24,7 +24,7 @@ Web Scraping, Optimization
 
 | Betting styles | Explanation |
 ----|---- 
-| win(Tansho) | predicting the horse which goals first  |
+| Win(Tansho) | predicting the horse which goals first  |
 | Place, Show(Fukusyo)  | predicting the horse which goals within third(Second when the number of starters is less than 8) |
 | Quinella(Umaren)  | predicting the two horses which goal within first and second, in no particular order |
 | Exacta(Umatan)  | redicting the two horses which goal within first and second, in particular order |
