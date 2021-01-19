@@ -9,7 +9,9 @@ Web Scraping, Optimization
 
 ### 1. Collecting past data
 * By using the technique of Web Scraping, extracting the race data from <a href="https://www.netkeiba.com/">netkeiba.com</a>.
-* As there are enormous race data, it takes tremendous times by extracting all data. So focusing on "not retired horse".
+* As there are enormous race data, it takes tremendous times by extracting all data. So focusing on "not retired horse(Genekiba)".
+
+![Extract the frame](https://github.com/takanyanta/Horse-racing/blob/main/netkeiba.png "process1")
 
 ### 2. Descriptive analysis
 * Becoming suspicious about common knowledge about horse racing
