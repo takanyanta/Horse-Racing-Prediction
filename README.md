@@ -17,11 +17,20 @@ Web Scraping, Optimization
 | Common knowledge | Explanation |
 ----|---- 
 | The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
-| * For the the turf race, when field conditions becomes wose, the speed tends to be slow  | TD4 |
-| * In the the turf, when field conditions becomes wose, the speed becomes slow.  | TD4 |
+| For the the turf race, when field conditions becomes wose, the speed tends to be slow  | TD4 |
 
 ### 3. Optimization of betting
-* Though there are many betting styles, focused to the below; 
+* As there are many betting styles, focused to the below; 
+
+| Betting styles | Explanation |
+----|---- 
+| win(Tansho) | The one which runs in the outer frame tends to lose because of sands falled down on the face |
+| Place, Show(Fukusyo)  | TD4 |
+| Quinella(Umaren)  | TD4 |
+| Exacta(Umatan)  | TD4 |
+| Quinella Place(Waido)  | TD4 |
+| Trio(Sanrenpuku)  | TD4 |
+| Trifecta(Sanrentan)  | TD4 |
 
 ### 4. Test by real race
 * 
