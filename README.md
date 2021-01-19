@@ -24,9 +24,9 @@ Web Scraping, Optimization
 
 | Betting styles | Explanation |
 ----|---- 
-| win(Tansho) | The one which runs in the outer frame tends to lose because of sands falled down on the face |
-| Place, Show(Fukusyo)  | TD4 |
-| Quinella(Umaren)  | TD4 |
+| win(Tansho) | predicting the horse which goals first  |
+| Place, Show(Fukusyo)  | predicting the horse which goals within third(Second when the number of starters is less than 8) |
+| Quinella(Umaren)  | predicting the two horses which goal within first and second |
 | Exacta(Umatan)  | TD4 |
 | Quinella Place(Waido)  | TD4 |
 | Trio(Sanrenpuku)  | TD4 |
