@@ -148,7 +148,7 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 
 #### 1. Importing Data
 
-* First, translate Columns-Name from Japanese to English
+* Translating Columns-Name from Japanese to English
 
 | Japanese | English | Japanese | English | Japanese | English | Japanese | English |
 ----|---- |---- |---- |---- |---- |---- |---- 
@@ -212,7 +212,7 @@ df.head(5)
 
 #### 2. Preprocessing Data
 
-* Second, preprocess data which makes data bocome able to be analyzed.
+* Preprocessing data which makes data bocome able to be analyzed.
 
 ```python
 df["Date"] = pd.to_datetime(df["Date"])
@@ -275,7 +275,11 @@ df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "mi
 
 #### 3. Descreptive Analysis
 
+* 
 
+| a | b |
+----|----
+|a | a|
 
 
 ### 3. Optimization of betting
@@ -289,7 +293,7 @@ df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "mi
 | Exacta(Umatan)  | redicting the two horses which goal within first and second, in particular order |
 | Quinella Place(Waido)  | predicting the two horses which goal within third, in no particular order |
 | Trio(Sanrenpuku)  | predicting the three horses which goal within third, in no particular order |
-| Trifecta(Sanrentan)  | predicting the three horses which goal within third, in particular order  |
+| Trifecta(Sanrentan)  | preodicting the three horses which goal within third, in particular order  |
 
 ### 4. Test by real race
 * 
