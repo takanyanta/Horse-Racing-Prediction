@@ -279,7 +279,7 @@ df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "mi
 
 | a | b |
 ----|----
-|a | a|
+|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/1.png "process1") | ![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/2.png "process1")|
 
 
 ### 3. Optimization of betting
