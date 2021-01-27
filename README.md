@@ -275,13 +275,35 @@ df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "mi
 
 #### 3. Descreptive Analysis
 
-* 
+* First, we focus on "DIRT" and "TURF" because the number of "OBSTACLE" is much less than the others.
+
+|Race Type|Data|
+---|---
+|DIRT|154483|
+|TURF|46129|
+|OBSTACLE|2007|
+
+* Second, *MPM* has outliers, so choose upper 99% of data.
 
 | class | Histgram |
 ----|----
 |Before|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/1.png "process1") |
 |After|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/2.png "process1")|
 
+```python
+use_ = []
+dirt_min =  np.percentile(df1[df1["Type"] == "DIRT"].dropna()["MPM"], 1)
+turf_min =  np.percentile(df1[df1["Type"] == "TURF"].dropna()["MPM"], 1)
+for i in range(len(df1)):
+    if df1["Type"].iat[i] == "DIRT" and df1["MPM"].iat[i] >=dirt_min:
+        use_.append(True)
+    elif df1["Type"].iat[i] == "TURF" and df1["MPM"].iat[i] >= turf_min:
+        use_.append(True)
+    else:
+        use_.append(False)
+
+df2 = df1[np.array(use_)].reset_index(drop=True)
+```
 
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
