@@ -471,18 +471,18 @@ best = fmin(
 | Class | Chart | Explanation |
 ---|---|---
 |Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/18.png "process1")|Numboer of heads, MPM and Distance are strongly correlated|
-|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/19.png "process1")|R2-score:0.73089|
-|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score:0.72800|
-|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score:0.62278|
+|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/19.png "process1")|R2-score : 0.73089|
+|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score : 0.72800|
+|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score : 0.62278|
 
 * The result of TURF
 
 | Class | Chart | Explanation |
 ---|---|---
 |Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/22.png "process1")|MPM, Distance and Course Condition are strongly correlated|
-|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/23.png "process1")|R2-score:0.72167|
-|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")|R2-score:0.71530|
-|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score:0.75462|
+|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/23.png "process1")|R2-score : 0.72167|
+|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")|R2-score : 0.71530|
+|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score : 0.75462|
 
 ### 3. Betting Strategy
 
@@ -510,9 +510,17 @@ best = fmin(
 |**Predict 3th**|0.36%|0.98%|1.479%|5.66%|
 |**Predict 4th~**|5.91%|5.66%|5.54%|57.3%|
 
-#### 3.2 Odds distribution
+#### 3.2 Odds distribution of 1th
 
+|-|Chart|Explanation|
+---|---|---
+|DIRT|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/26.png "process1")|Mean : 7.3, Median : 3.4|
+|TURF|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/27.png "process1")|Mean : 9.7, Median : 4.7|
 
+#### 3.3 Compute expected value
+
+* DIRT : 8.19%×7.3=0.59 **< 1**
+* DIRT : 17.4%×9.7=1.68 **> 1**
 
 ### 4. Test by real race
 * 
