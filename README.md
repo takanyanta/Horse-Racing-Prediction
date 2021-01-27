@@ -526,3 +526,4 @@ best = fmin(
 * We should bet not on DIRT race but on TURF race.
 * The race cards are shown at Friday evening and the acutal horse weight are shown 40minute before the race. So we should run built model every weekend.
 
+![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/27.png "process1")
