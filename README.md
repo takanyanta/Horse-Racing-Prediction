@@ -484,9 +484,14 @@ best = fmin(
 |Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")|R2-score:0.71530|
 |Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score:0.75462|
 
-### 3. Betting
+### 3. Betting Strategy
 
-* DIRT
+* For thinking simple, focus on "Win(Tansho)"
+
+#### 3.1 Result of Predicting
+
+##### DIRT
+* The percentage of predicting "Win" is **8.19%**(=0.59/(0.59+0.83+0.71+5.11))
 
 |-|Actual 1th|Actual 2th|Actual 3th|Actual 4th~|
 ---|---|---|---|---
@@ -495,8 +500,8 @@ best = fmin(
 |**Predict 3th**|0.71%|0.83%|0.59%|5.11%|
 |**Predict 4th~**|4.28%|4.88%|4.88%|64.16%|
 
-
-* TURF
+##### TURF
+* The percentage of predicting "Win" is **17.4%**(=1.47/(1.47+0.86+0.36+5.78))
 
 |-|Actual 1th|Actual 2th|Actual 3th|Actual 4th~|
 ---|---|---|---|---
@@ -504,6 +509,10 @@ best = fmin(
 |**Predict 2th**|0.73%|0.98%|1.23%|5.54%|
 |**Predict 3th**|0.36%|0.98%|1.479%|5.66%|
 |**Predict 4th~**|5.91%|5.66%|5.54%|57.3%|
+
+#### 3.2 Odds distribution
+
+
 
 ### 4. Test by real race
 * 
