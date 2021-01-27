@@ -152,18 +152,17 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 
 | Japanese Word | English Word |
 ----|---- 
-|日付|Date|
-|開催|Place|
-|天気|Place|
-|R|Place|
-|レース名|Place|
-|映像|Place|
-|頭数|Place|
-|枠番|Place|
-|馬番|Place|
-|オッズ|Place|
-|人気|Place|
-|着番|Place|
+|日付|Date||着番|
+|開催|Place|騎手||
+|天気|Place|斤量||
+|R|Place|距離||
+|レース名|Place|馬場||
+|映像|Place|馬場指数||
+|頭数|Place|タイム||
+|枠番|Place|着差||
+|馬番|Place|タイム指数||
+|オッズ|Place|通過||
+|人気|Place|ぺース||
 
 
 ### 3. Optimization of betting
