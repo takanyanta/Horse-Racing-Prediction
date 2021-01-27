@@ -148,10 +148,23 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 
 #### 1. Importing Data
 
+* First, translate Columns-Name from Japanese to English
+
 | Japanese Word | English Word |
 ----|---- 
-| | |
-| | |
+|日付|Date|
+|開催|Place|
+|天気|Place|
+|R|Place|
+|レース名|Place|
+|映像|Place|
+|頭数|Place|
+|枠番|Place|
+|馬番|Place|
+|オッズ|Place|
+|人気|Place|
+|着番|Place|
+
 
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
