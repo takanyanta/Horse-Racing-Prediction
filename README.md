@@ -517,13 +517,12 @@ best = fmin(
 |DIRT|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/26.png "process1")|Mean : 7.3, Median : 3.4|
 |TURF|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/27.png "process1")|Mean : 9.7, Median : 4.7|
 
-#### 4-3 Compute expected value
+#### 4-3 Compute the expected value
 
 * DIRT : 8.19%×7.3=0.59 **< 1**
 * TURF : 17.4%×9.7=1.68 **> 1**
 
 ## Conclusion
 * We should bet not on DIRT race but on TURF race.
-* As the race cards are often shown Friday evening, we should create below system.
-* 
+* The race cards are shown at Friday evening and the acutal horse weight are shown 40minute before the race. So we should run built model every weekend.
 
