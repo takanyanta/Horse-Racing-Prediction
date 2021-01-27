@@ -150,19 +150,19 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 
 * First, translate Columns-Name from Japanese to English
 
-| Japanese Word | English Word |
-----|---- 
-|日付|Date||着番|
-|開催|Place|騎手||
-|天気|Place|斤量||
-|R|Place|距離||
-|レース名|Place|馬場||
-|映像|Place|馬場指数||
-|頭数|Place|タイム||
-|枠番|Place|着差||
-|馬番|Place|タイム指数||
-|オッズ|Place|通過||
-|人気|Place|ぺース||
+| Japanese | English | Japanese | English | Japanese | English | Japanese | English |
+----|---- |---- |---- |---- |---- |---- |---- 
+|日付|Date|着番|Arrival_Number|上り|Final_Time|セリ取引価格|Trading_Price|
+|開催|Place|騎手|Jockey|馬体重|Horse_Weight|獲得賞金|Accumulate_Prize|
+|天気|Weather|斤量|Weight|厩舎コメント|Comment|通算成績|Accumulate_record|
+|R|R|距離|Distance_and_Type|備考|Others|主な勝鞍|Main_Win_Race|
+|レース名|Race_Name|馬場|Course_Condition|勝ち馬(2着馬)|Winning_Horse(Second_Winner)|近親馬|Relative_Horse|
+|映像|Movie|馬場指数|Course_Condition_Index|賞金|Prize|馬名|Horse_Name|
+|頭数|Number_of_Heads|タイム|Time|生年月日|Birthday|-|-|
+|枠番|Frame_Number|着差|Difference|馬調教師主|Trainer|-|-|
+|馬番|Horse_Number|タイム指数|Time_Index|馬主|Owner|-|-|
+|オッズ|Odds|通過|Passing|生産者|Producer|-|-|
+|人気|Popularity|ぺース|Pace|産地|Origin|-|-|
 
 
 ### 3. Optimization of betting
