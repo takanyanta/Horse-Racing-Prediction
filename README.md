@@ -275,6 +275,9 @@ df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "mi
 
 #### 3. Descreptive Analysis
 
+
+
+
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
 
