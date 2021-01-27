@@ -307,20 +307,20 @@ df2 = df1[np.array(use_)].reset_index(drop=True)
 
 * Below is the result of descriptive analysis
 
-| Name | Chart |
----|---
-|Origin|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/3.png "process1")|
-|Jockey|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/4.png "process1")|
-|Trainer|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/5.png "process1")|
-|Horse_Weight_Actual|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/6.png "process1")|
-|Horse_Weight_Change|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/7.png "process1")|
-|Weight_per_Horse_Weight|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/8.png "process1")|
-|Old|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/9.png "process1")|
-|Number_of_Heads|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/12.png "process1")|
-|Frame_Number|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/13.png "process1")|
-|Weather|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/14.png "process1")|
-|Course_Condition|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/15.png "process1")|
-|Distance|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/16.png "process1")|
+| Name | Chart | Explanation|
+---|---|---
+|Origin|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/3.png "process1")|Some Origins tends to win, but their race count is not a lot|
+|Jockey|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/4.png "process1")|Some Jockeys tends to win, but their race count is not a lot|
+|Trainer|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/5.png "process1")|No correlation can be seen|
+|Horse_Weight_Actual|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/6.png "process1")|No correlation can be seen|
+|Horse_Weight_Change|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/7.png "process1")|No correlation can be seen|
+|Weight_per_Horse_Weight|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/8.png "process1")|No correlation can be seen|
+|Old|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/9.png "process1")|No correlation can be seen|
+|Number_of_Heads|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/12.png "process1")|There is a correlation between MPM and Number of heads|
+|Frame_Number|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/13.png "process1")|No correlation can be seen|
+|Weather|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/14.png "process1")|There is a correlation between MPM and weather|
+|Course_Condition|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/15.png "process1")|There is a correlation between MPM and course condition|
+|Distance|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/17.png "process1")|There is a correlation between MPM and distance|
 
 
 
