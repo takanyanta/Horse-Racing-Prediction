@@ -470,7 +470,7 @@ best = fmin(
 
 | Class | Chart | Explanation |
 ---|---|---
-|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/18.png "process1")|Numboer of heads, MPM and Distance are strongly correlated|
+|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/18.png "process1")|Number of heads, MPM and Distance are strongly correlated|
 |Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/19.png "process1")|R2-score : 0.73089|
 |Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score : 0.72800|
 |Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score : 0.62278|
