@@ -485,21 +485,25 @@ best = fmin(
 |Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score:0.75462|
 
 ### 3. Optimization of betting
-* As there are many betting styles, focused to the below; 
 
-| Betting styles | Explanation |
-----|---- 
-| Win(Tansho) | predicting the horse which goals first  |
-| Place, Show(Fukusyo)  | predicting the horse which goals within third(Second when the number of starters is less than 8) |
-| Quinella(Umaren)  | predicting the two horses which goal within first and second, in no particular order |
-| Exacta(Umatan)  | redicting the two horses which goal within first and second, in particular order |
-| Quinella Place(Waido)  | predicting the two horses which goal within third, in no particular order |
-| Trio(Sanrenpuku)  | predicting the three horses which goal within third, in no particular order |
-| Trifecta(Sanrentan)  | preodicting the three horses which goal within third, in particular order  |
+* DIRT
+
+|-|Actual 1th|Actual 2th|Actual 3th|Actual 4th~|
+---|---|---|---|---
+|**Predict 1th**|0.59%|0.83%|0.71%|5.11%|
+|**Predict 2th**|1.66%|0.83%|0.95%|3.80%|
+|**Predict 3th**|0.71%|0.83%|0.59%|5.11%|
+|**Predict 4th~**|4.28%|4.88%|4.88%|64.16%|
 
 
+* TURF
 
-
+|-|Actual 1th|Actual 2th|Actual 3th|Actual 4th~|
+---|---|---|---|---
+|**Predict 1th**|1.47%|0.86%|0.36%|5.78%|
+|**Predict 2th**|0.73%|0.98%|1.23%|5.54%|
+|**Predict 3th**|0.36%|0.98%|1.479%|5.66%|
+|**Predict 4th~**|5.91%|5.66%|5.54%|57.3%|
 
 ### 4. Test by real race
 * 
