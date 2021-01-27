@@ -9,7 +9,7 @@ Web Scraping, Regression
 
 ### 1. Collecting past data
 * By using the technique of Web Scraping, extracting the race data from <a href="https://www.netkeiba.com/">netkeiba.com</a>.
-* As there are enormous race data, it takes tremendous times by extracting all data. So focusing on "not retired horse(Genekiba)".
+* As there is enormous race data, it takes tremendous amounts of time to extract all data. So focusing on "not a retired horse(Genekiba)".
 
 ![Extract the frame](https://github.com/takanyanta/Horse-racing/blob/main/netkeiba.png "process1")
 
@@ -144,7 +144,7 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 |No.| Common knowledge | Explanation |
 ----|----|---- 
 |1| The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
-|2| For the the turf race, when field conditions becomes wose, the speed tends to be slow  | When the field condition would be bad, the horse would run slowly not to slip  |
+|2| For the the turf race, when field conditions becomes worse, the speed tends to be slow  | When the field condition would be bad, the horse would run slowly not to slip  |
 
 #### 2-1. Importing Data
 
@@ -212,7 +212,7 @@ df.head(5)
 
 #### 2-2. Preprocessing Data
 
-* Preprocessing data which makes data bocome able to be analyzed.
+* Preprocessing data which makes data become able to be analyzed.
 
 ```python
 df["Date"] = pd.to_datetime(df["Date"])
@@ -326,7 +326,7 @@ df2 = df1[np.array(use_)].reset_index(drop=True)
 
 * Choose below 12 features for building regression model; ["MPM","Weather", "Number_of_Heads", "Frame_Number", "Horse_Number", "Course_Condition", "Distance", "Horse_Weight_Actual","Horse_Weight_Change", "Weight_per_Horse_Weight",  "Old", "Interval"]
 * And use the previous -1th~-3th race result.
-* Define the data which can be integrated to whole race result as validation data.
+* Define the data which can be integrated to the whole race result as validation data.
 
 ```python
 df3 = df3.sort_values(["Horse_Name", "Date"]).reset_index(drop=True)
@@ -523,8 +523,8 @@ best = fmin(
 * TURF : 17.4%×9.7=1.68 **> 1**
 
 ## Conclusion
-* We should bet not on DIRT race but on TURF race.
+* We should bet not on the DIRT race but on the TURF race.
 * Though common knowledge No.1 is wrong, common knowledge No.2 is right.
-* The race cards are shown at Friday evening and the acutal horse weight are shown 40minute before the race. So we should run built model every weekend.
+* The race cards are shown on Friday evening and the actual horse weight is shown 40minute before the race. So we should run a built model every weekend.
 
 ![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/28.png "process1")
