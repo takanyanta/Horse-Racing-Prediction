@@ -466,8 +466,13 @@ best = fmin(
     verbose=1
 )
 ```
-
-
+* The result of DIRT
+| Class | Chart | Explanation |
+---|---|---
+|Feature Importance(Absolute value of Coef)|||
+|Parity plot(Train)|||
+|Parity plot(Test)|||
+|Parity plot(Valid)|||
 
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
