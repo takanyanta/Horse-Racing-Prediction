@@ -467,20 +467,22 @@ best = fmin(
 )
 ```
 * The result of DIRT
+
 | Class | Chart | Explanation |
 ---|---|---
-|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/18.png "process1")||
-|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/19.png "process1")||
-|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")||
-|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")||
+|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/18.png "process1")|Numboer of heads, MPM and Distance are strongly correlated|
+|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/19.png "process1")|R2-score:0.73089|
+|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score:0.72800|
+|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/21.png "process1")|R2-score:0.62278|
 
 * The result of TURF
+
 | Class | Chart | Explanation |
 ---|---|---
-|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/22.png "process1")||
-|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/23.png "process1")||
-|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")||
-|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")||
+|Feature Importance(Absolute value of Coef)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/22.png "process1")|MPM, Distance and Course Condition are strongly correlated|
+|Parity plot(Train)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/23.png "process1")|R2-score:0.72167|
+|Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")|R2-score:0.71530|
+|Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score:0.75462|
 
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
