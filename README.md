@@ -1,4 +1,4 @@
-# Horse-racing-Prediction
+# Horse-Racing-Prediction
 Web Scraping, Regression
 
 ## Purpose
