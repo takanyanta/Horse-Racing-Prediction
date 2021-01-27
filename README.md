@@ -144,7 +144,7 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 |No.| Common knowledge | Explanation |
 ----|----|---- 
 |1| The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
-|2| For the the turf race, when field conditions becomes wose, the speed tends to be slow  | When the field condition would be bad, the horse run slowly not to slip  |
+|2| For the the turf race, when field conditions becomes wose, the speed tends to be slow  | When the field condition would be bad, the horse would run slowly not to slip  |
 
 #### 2-1. Importing Data
 
@@ -524,7 +524,7 @@ best = fmin(
 
 ## Conclusion
 * We should bet not on DIRT race but on TURF race.
-* Though common knowledge No.1 is wrong, ommon knowledge No.2 is right.
+* Though common knowledge No.1 is wrong, common knowledge No.2 is right.
 * The race cards are shown at Friday evening and the acutal horse weight are shown 40minute before the race. So we should run built model every weekend.
 
 ![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/28.png "process1")
