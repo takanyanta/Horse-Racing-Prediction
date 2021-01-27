@@ -305,6 +305,26 @@ for i in range(len(df1)):
 df2 = df1[np.array(use_)].reset_index(drop=True)
 ```
 
+* Below is the result of descriptive analysis
+
+| Name | Chart |
+---|---
+|Origin|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/3.png "process1")|
+|Jockey|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/4.png "process1")|
+|Trainer|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/5.png "process1")|
+|Horse_Weight_Actual|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/6.png "process1")|
+|Horse_Weight_Change|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/7.png "process1")|
+|Weight_per_Horse_Weight|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/8.png "process1")|
+|Old|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/9.png "process1")|
+|Number_of_Heads|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/12.png "process1")|
+|Frame_Number|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/13.png "process1")|
+|Weather|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/14.png "process1")|
+|Course_Condition|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/15.png "process1")|
+|Distance|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/16.png "process1")|
+
+
+
+
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
 
@@ -317,6 +337,10 @@ df2 = df1[np.array(use_)].reset_index(drop=True)
 | Quinella Place(Waido)  | predicting the two horses which goal within third, in no particular order |
 | Trio(Sanrenpuku)  | predicting the three horses which goal within third, in no particular order |
 | Trifecta(Sanrentan)  | preodicting the three horses which goal within third, in particular order  |
+
+
+
+
 
 ### 4. Test by real race
 * 
