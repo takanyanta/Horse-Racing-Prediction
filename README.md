@@ -146,7 +146,7 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 | The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
 | For the the turf race, when field conditions becomes wose, the speed tends to be slow  | TD4 |
 
-#### 1. Importing Data
+#### 2-1. Importing Data
 
 * Translating Columns-Name from Japanese to English
 
@@ -210,7 +210,7 @@ df.head(5)
 ```
 
 
-#### 2. Preprocessing Data
+#### 2-2. Preprocessing Data
 
 * Preprocessing data which makes data bocome able to be analyzed.
 
@@ -273,7 +273,7 @@ df["Foreign_or_Domestic"] = df["Trainer"].apply(lambda x : "Foreign" if "海外"
 df.groupby("Foreign_or_Domestic")["MPM"].agg(["mean", "std", "count", "max", "min"])
 ```
 
-#### 3. Descreptive Analysis
+#### 2-3. Descreptive Analysis
 
 * First, we focus on "DIRT" and "TURF" because the number of "OBSTACLE" is much less than the others.
 
@@ -322,7 +322,7 @@ df2 = df1[np.array(use_)].reset_index(drop=True)
 |Course_Condition|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/15.png "process1")|There is a correlation between MPM and course condition|
 |Distance|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/17.png "process1")|There is a correlation between MPM and distance|
 
-#### 4. Build Regression Model
+### 3. Build Regression Model
 
 * Choose below 12 features for building regression model; ["MPM","Weather", "Number_of_Heads", "Frame_Number", "Horse_Number", "Course_Condition", "Distance", "Horse_Weight_Actual","Horse_Weight_Change", "Weight_per_Horse_Weight",  "Old", "Interval"]
 * And use the previous -1th~-3th race result.
@@ -484,11 +484,11 @@ best = fmin(
 |Parity plot(Test)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/24.png "process1")|R2-score : 0.71530|
 |Parity plot(Valid)|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/25.png "process1")|R2-score : 0.75462|
 
-### 3. Betting Strategy
+### 4. Betting Strategy
 
 * For thinking simple, focus on "Win(Tansho)"
 
-#### 3.1 Result of Predicting
+#### 4-1 Result of Predicting
 
 ##### DIRT
 * The percentage of predicting "Win" is **8.19%**(=0.59/(0.59+0.83+0.71+5.11))
@@ -510,23 +510,20 @@ best = fmin(
 |**Predict 3th**|0.36%|0.98%|1.479%|5.66%|
 |**Predict 4th~**|5.91%|5.66%|5.54%|57.3%|
 
-#### 3.2 Odds distribution of 1th
+#### 4-2 Odds distribution of 1th
 
 |-|Chart|Explanation|
 ---|---|---
 |DIRT|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/26.png "process1")|Mean : 7.3, Median : 3.4|
 |TURF|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/27.png "process1")|Mean : 9.7, Median : 4.7|
 
-#### 3.3 Compute expected value
+#### 4-3 Compute expected value
 
 * DIRT : 8.19%×7.3=0.59 **< 1**
-* DIRT : 17.4%×9.7=1.68 **> 1**
-
-### 4. Test by real race
-* 
+* TURF : 17.4%×9.7=1.68 **> 1**
 
 ## Conclusion
-* 
-* 
+* We should bet not on DIRT race but on TURF race.
+* As the race cards are often shown Friday evening, we should create below system.
 * 
 
