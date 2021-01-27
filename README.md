@@ -1,5 +1,5 @@
 # Horse-racing
-Web Scraping, Optimization
+Web Scraping, Regression
 
 ## Purpose
 * For my interest in horse racing(stochastic game)
