@@ -74,7 +74,7 @@ while True:
     except IndexError:
         break
 
-    pd.DataFrame(url_list, columns=['URL']).to_csv(r'C:\Users\takayuki\OneDrive\競馬アナリティクス改め\20200106\Umas\Uma{:07d}.csv'.format(l), encoding = "shift_jis")
+    pd.DataFrame(url_list, columns=['URL']).to_csv('\Uma{:07d}.csv'.format(l), encoding = "shift_jis")
     l += 1
     
 pd.DataFrame(url_list, columns=['URL']).to_csv(r'\Uma{:07d}.csv'.format(l), encoding = "shift_jis")
