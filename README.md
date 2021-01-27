@@ -146,6 +146,13 @@ df = uma_get(driver, 'https://db.netkeiba.com/horse/2018105845/')
 | The horse which runs in the inner frame tends to win | The one which runs in the outer frame tends to lose because of sands falled down on the face |
 | For the the turf race, when field conditions becomes wose, the speed tends to be slow  | TD4 |
 
+#### 1. Importing Data
+
+| Japanese Word | English Word |
+----|---- 
+| | |
+| | |
+
 ### 3. Optimization of betting
 * As there are many betting styles, focused to the below; 
 
