@@ -322,6 +322,150 @@ df2 = df1[np.array(use_)].reset_index(drop=True)
 |Course_Condition|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/15.png "process1")|There is a correlation between MPM and course condition|
 |Distance|![Extract the frame](https://github.com/takanyanta/Horse-Racing-Analytics/blob/main/pic/17.png "process1")|There is a correlation between MPM and distance|
 
+#### 4. Build Regression Model
+
+* Choose below 12 features for building regression model; ["MPM","Weather", "Number_of_Heads", "Frame_Number", "Horse_Number", "Course_Condition", "Distance", "Horse_Weight_Actual","Horse_Weight_Change", "Weight_per_Horse_Weight",  "Old", "Interval"]
+* And use the previous -1th~-3th race result.
+* Define the data which can be integrated to whole race result as validation data.
+
+```python
+df3 = df3.sort_values(["Horse_Name", "Date"]).reset_index(drop=True)
+
+select1 = df3["Course_Condition"] != "nan"
+
+select2 =  (df3["Weather"] != "") | (df3["Weather"] != "nan")
+
+df3.columns.values
+
+df3["Interval"] = df3["Date"].diff().apply(lambda x : x.days)
+
+for_rename = [ ["{}_{}".format(df3.columns.values[j],i) for j in range(len(df3.columns.values))] for i in range(1, 4, 1)]
+
+dict1 = {}
+dict2 = {}
+dict3 = {}
+for i in range(len( for_rename[0] )) :
+    dict1[df3.columns.values[i]] = for_rename[0][i]
+for i in range(len( for_rename[1] )) :
+    dict2[df3.columns.values[i]] = for_rename[1][i]
+for i in range(len( for_rename[2] )) :
+    dict3[df3.columns.values[i]] = for_rename[2][i]
+
+df4 = df3.copy()
+
+df4 = pd.merge(df4,  df3.shift(periods=1).rename(columns=dict1),  left_index=True, right_index=True)
+
+df4 = pd.merge(df4,  df3.shift(periods=2).rename(columns=dict2),  left_index=True, right_index=True)
+
+df4 = pd.merge(df4,  df3.shift(periods=3).rename(columns=dict3),  left_index=True, right_index=True)
+
+select3 = (df4["Horse_Name"] == df4["Horse_Name_1"]) & (df4["Horse_Name_1"] == df4["Horse_Name_2"]) & (df4["Horse_Name_2"] == df4["Horse_Name_3"])
+
+df5 = df4[select1 & select2 & select3].reset_index(drop=True)
+
+df5.columns.values[:int(len(df5.columns.values)/4)]
+
+cols = ["MPM","Weather", "Number_of_Heads", "Frame_Number", "Horse_Number", "Course_Condition", "Distance", "Horse_Weight_Actual", 
+        "Horse_Weight_Change", "Weight_per_Horse_Weight",  "Old", "Interval"]
+
+analyze_cols = cols + ["{}_{}".format(j, i) for j in cols for i in range(1, 4,1)]
+
+df6 = df5[df5[analyze_cols].isnull().sum(axis=1) == 0]
+
+df_DIRT = df6[df6["Type"] == "DIRT"].reset_index(drop=True)
+df_TURF = df6[df6["Type"] == "TURF"].reset_index(drop=True)
+
+Num_heads_dirt = df_DIRT.groupby(['Date', 'Place',  'R', 'Race_Name'])["Number_of_Heads"].mean()
+
+R_count_dirt = df_DIRT.groupby(['Date', 'Place',  'R', 'Race_Name'])["R"].count()
+
+valid_race_dirt = Num_heads_dirt[Num_heads_dirt == R_count_dirt]
+
+Num_heads_turf = df_TURF.groupby(['Date', 'Place',  'R', 'Race_Name'])["Number_of_Heads"].mean()
+
+R_count_turf = df_TURF.groupby(['Date', 'Place',  'R', 'Race_Name'])["R"].count()
+
+valid_race_turf = Num_heads_turf[Num_heads_turf == R_count_turf]
+
+valid_race_dirt1 = valid_race_dirt.reset_index().rename(columns={"Number_of_Heads":"Valid"})
+valid_race_turf1 = valid_race_turf.reset_index().rename(columns={"Number_of_Heads":"Valid"})
+
+df_DIRT_add_Valid = pd.merge(df_DIRT, valid_race_dirt1, on = ['Date', 'Place',  'R', 'Race_Name'], how="left" )
+df_TURF_add_Valid = pd.merge(df_TURF, valid_race_turf1, on = ['Date', 'Place',  'R', 'Race_Name'], how="left" )
+
+df_DIRT_analyze = df_DIRT_add_Valid[analyze_cols+["Valid"]]
+df_TURF_analyze = df_TURF_add_Valid[analyze_cols+["Valid"]]
+
+df_DIRT_analyze_dummies = pd.get_dummies(df_DIRT_analyze,drop_first=True )
+df_TURF_analyze_dummies = pd.get_dummies(df_TURF_analyze,drop_first=True )
+
+df_DIRT_analyze_dummies_traintest = df_DIRT_analyze_dummies[df_DIRT_analyze_dummies["Valid"].isnull()]
+df_TURF_analyze_dummies_traintest = df_TURF_analyze_dummies[df_TURF_analyze_dummies["Valid"].isnull()]
+df_DIRT_analyze_dummies_valid = df_DIRT_analyze_dummies[~df_DIRT_analyze_dummies["Valid"].isnull()]
+df_TURF_analyze_dummies_valid = df_TURF_analyze_dummies[~df_TURF_analyze_dummies["Valid"].isnull()]
+
+del df_DIRT_analyze_dummies_traintest["Valid"]
+del df_TURF_analyze_dummies_traintest["Valid"]
+del df_DIRT_analyze_dummies_valid["Valid"]
+del df_TURF_analyze_dummies_valid["Valid"]
+
+X_train_dirt, X_test_dirt, y_train_dirt, y_test_dirt = train_test_split(df_DIRT_analyze_dummies_traintest.drop("MPM", axis=1), df_DIRT_analyze_dummies_traintest[["MPM"]])
+X_train_turf, X_test_turf, y_train_turf, y_test_turf = train_test_split(df_TURF_analyze_dummies_traintest.drop("MPM", axis=1), df_TURF_analyze_dummies_traintest[["MPM"]])
+X_valid_dirt, y_valid_dirt = df_DIRT_analyze_dummies_valid.drop("MPM", axis=1), df_DIRT_analyze_dummies_valid[["MPM"]]
+X_valid_turf, y_valid_turf = df_TURF_analyze_dummies_valid.drop("MPM", axis=1), df_TURF_analyze_dummies_valid[["MPM"]]
+
+sc_dirt_X = StandardScaler()
+sc_dirt_y = StandardScaler()
+sc_turf_X = StandardScaler()
+sc_turf_y = StandardScaler()
+
+X_train_dirt_std = sc_dirt_X.fit_transform(X_train_dirt)
+X_test_dirt_std = sc_dirt_X.transform(X_test_dirt)
+X_valid_dirt_std = sc_dirt_X.transform(X_valid_dirt)
+
+y_train_dirt_std = sc_dirt_y.fit_transform(y_train_dirt)
+y_test_dirt_std = sc_dirt_y.transform(y_test_dirt)
+y_valid_dirt_std = sc_dirt_y.transform(y_valid_dirt)
+
+X_train_turf_std = sc_turf_X.fit_transform(X_train_turf)
+X_test_turf_std = sc_turf_X.transform(X_test_turf)
+X_valid_turf_std = sc_turf_X.transform(X_valid_turf)
+
+y_train_turf_std = sc_turf_y.fit_transform(y_train_turf)
+y_test_turf_std = sc_turf_y.transform(y_test_turf)
+y_valid_turf_std = sc_turf_y.transform(y_valid_turf)
+```
+
+* For the Interpretation of the model, use Lasso-Regression with L1-regularization
+* As the result of hyperparameter tuning, "alpha" should be set to 0.006739 for both DIRT and TURF.
+
+```python
+#Define parameter which is wanted to be searched
+hyperopt_parameters = {
+    'alpha': hp.loguniform('alpha', -5, 0),
+}
+
+def objective(args):
+    estimator = Lasso(**args)
+    
+    estimator.fit(X_train_dirt_std, y_train_dirt_std)
+    
+    predicts = estimator.predict(X_test_dirt_std)
+    R2 = r2_score(y_test_dirt_std, predicts)
+    return -1*R2
+
+max_evals = 200
+trials = Trials()
+
+best = fmin(
+    objective,
+    hyperopt_parameters,
+    algo=tpe.suggest,
+    max_evals=max_evals,
+    trials=trials,
+    verbose=1
+)
+```
 
 
 
